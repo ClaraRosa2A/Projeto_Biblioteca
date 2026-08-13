@@ -59,3 +59,21 @@ def cadastrar_livro():
     salvar_livros()
     print("Livro cadastrado com sucesso!")
 
+# Empresta um livro pelo código
+def emprestar_livro():
+    print("\n--- EMPRESTAR LIVRO ---")
+    codigo = input("Digite o código/ISBN do livro: ")
+    for livro in livros:
+        if livro["codigo"] == codigo:
+ 
+            if livro["status"] == "Disponível":
+                livro["status"] = "Emprestado"
+                salvar_livros()
+                print("Livro emprestado com sucesso!")
+            else:
+                print("Esse livro já está emprestado.")
+ 
+            return
+    print("Livro não encontrado.")
+ 
+
