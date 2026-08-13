@@ -92,5 +92,21 @@ def devolver_livro():
  
             return
     print("Livro não encontrado.")
-    
+
+# Mostra todos os livros
+def listar_livros():
+    print("\n--- TODOS OS LIVROS ---")
+
+    if len(livros) == 0:
+        print("Nenhum livro cadastrado.")
+        return
+ 
+    for livro in livros:
+        print("-------------------------")
+        print("Título:", livro["titulo"])
+        print("Autor:", livro["autor"])
+        print("Ano:", livro["ano"])
+        print("Código:", livro["codigo"])
+        print("Status:", livro["status"])
+
 
