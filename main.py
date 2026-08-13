@@ -150,3 +150,6 @@ def ordenar_livros():
  
     else:
         print("Opção inválida.")
+
+# Carrega os livros salvos
+carregar_livros()
