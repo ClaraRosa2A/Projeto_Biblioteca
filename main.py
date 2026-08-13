@@ -109,4 +109,22 @@ def listar_livros():
         print("Código:", livro["codigo"])
         print("Status:", livro["status"])
 
+# Procura um livro pelo título ou autor
+def buscar_livro():
+    print("\n--- BUSCAR LIVRO ---")
+    busca = input("Digite o título ou autor: ").lower()
+    encontrou = False
+ 
+    for livro in livros:
+        if busca in livro["titulo"].lower() or busca in livro["autor"].lower():
+            print("-------------------------")
+            print("Título:", livro["titulo"])
+            print("Autor:", livro["autor"])
+            print("Ano:", livro["ano"])
+            print("Código:", livro["codigo"])
+            print("Status:", livro["status"])
+ 
+            encontrou = True
+    if encontrou == False:
+        print("Nenhum livro encontrado.")
 
